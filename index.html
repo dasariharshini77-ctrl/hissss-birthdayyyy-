@@ -1,0 +1,329 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nannaluuu 💌</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#ffdfe8;
+overflow-x:hidden;
+color:white;
+}
+
+/* floating hearts */
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:10;
+}
+
+.hearts span{
+position:absolute;
+bottom:-100px;
+font-size:24px;
+animation:float 10s linear infinite;
+opacity:.7;
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:50%;animation-delay:4s;}
+.hearts span:nth-child(4){left:70%;animation-delay:1s;}
+.hearts span:nth-child(5){left:90%;animation-delay:3s;}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+/* lock */
+
+.lock{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:linear-gradient(to bottom,#ffcad4,#ffdfe8);
+}
+
+.lock-box{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:30px;
+text-align:center;
+width:100%;
+max-width:350px;
+}
+
+.lock-box h1{
+font-family:'Caveat',cursive;
+font-size:70px;
+margin-bottom:10px;
+}
+
+.lock-box p{
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:20px;
+outline:none;
+margin-bottom:20px;
+font-size:18px;
+text-align:center;
+}
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff4f81;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.hidden{
+display:none;
+}
+
+/* sections */
+
+.section{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+}
+
+.section img{
+width:100%;
+height:100%;
+object-fit:cover;
+position:absolute;
+top:0;
+left:0;
+filter:brightness(0.7);
+}
+
+.overlay{
+position:relative;
+z-index:2;
+padding:20px;
+animation:fade 1.5s ease;
+}
+
+.overlay h2{
+font-family:'Caveat',cursive;
+font-size:75px;
+margin-bottom:10px;
+}
+
+.overlay p{
+font-size:20px;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ending */
+
+.end{
+background:#ffd1dc;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.end h1{
+font-family:'Caveat',cursive;
+font-size:90px;
+margin-bottom:20px;
+}
+
+.end p{
+font-size:22px;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+<span>❤️</span>
+<span>🤍</span>
+<span>❤️</span>
+<span>🤍</span>
+<span>❤️</span>
+</div>
+
+<!-- LOCK -->
+
+<div class="lock" id="lock">
+
+<div class="lock-box">
+
+<h1>Hey Nannaluuu 🫶</h1>
+
+<p>something special is waiting for you ♡</p>
+
+<input type="password" id="password" placeholder="enter password">
+
+<button onclick="unlock()">open ♡</button>
+
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div id="main" class="hidden">
+
+<section class="section">
+<img src="r1.jpeg">
+
+<div class="overlay">
+<h2>Happy Birthday ❤️</h2>
+
+<p>
+to my prettiest boy everrr 💌
+</p>
+</div>
+</section>
+
+<section class="section">
+<img src="r2.jpeg">
+
+<div class="overlay">
+<h2>Nannaluuu ♡</h2>
+
+<p>
+always happy that you were always with meee 🫶
+</p>
+</div>
+</section>
+
+<section class="section">
+<img src="r3.jpeg">
+
+<div class="overlay">
+<h2>My Favourite Person ✨</h2>
+
+<p>
+enjoyyy yourrr dayyy 💌
+</p>
+</div>
+</section>
+
+<section class="section">
+<img src="r4.jpeg">
+
+<div class="overlay">
+<h2>LOVE YOUUU ❤️</h2>
+
+<p>
+anddd yeahh it's your day soo LOVE YOU!! ❤️
+</p>
+</div>
+</section>
+
+<div class="end">
+
+<div>
+
+<h1>forever us ♡</h1>
+
+<p>
+love you endlessly nannaluuu 💌
+<br><br>
+— yours forever 🫶
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function unlock(){
+
+let pass = document.getElementById("password").value;
+
+if(pass === "2709"){
+
+document.getElementById("lock").classList.add("hidden");
+
+document.getElementById("main").classList.remove("hidden");
+
+}else{
+
+alert("wrong password baby 🥺");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
+```
